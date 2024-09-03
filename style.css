@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: beige;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content p span {
+    color: #0ef;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: rgb(54, 52, 52);
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(54, 52, 52);
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0s;
+    box-shadow: 0 0 10px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 25px cyan;
+}
+
+.home .home-img {
+    width: 30%;
+    /* margin-left: 12rem; */
+    border-radius: 80%;
+    box-shadow: 0 0 8px #0ef;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.home .home-img:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 25px #0ef;
+}
+
+.about {
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.about .row .image {
+    text-align: center;
+    flex: 1 1 35rem;
+}
+
+.about .row .image img {
+    margin: 4rem;
+    width: 24rem;
+    height: 28rem;
+    border-radius: 5%;
+    box-shadow: 0 0 8px #0ef;
+    transition: 1s ease;
+}
+
+.about .row .image img:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 25px #0ef;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.about .row .content h3 {
+    color: aliceblue;
+    font-size: 2.5rem;
+}
+
+.about .row .content .tag {
+    font-size: 1.4rem;
+    color: aliceblue;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: "Nunito";
+    font-weight: 600;
+    text-transform: none;
+}
+
+.about .row .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: "Nunito";
+    font-weight: 600;
+}
+
+.about .heading,
+.education .heading,
+.contact .heading {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.education {
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+}
+
+.education .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.education .box-container .box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px #0ef;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+    background: #0f2653;
+    transition: 1s ease;
+}
+
+.education .box-container .box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #0ef;
+}
+
+.education .box-container .box .image {
+    flex: 1 1 20rem;
+    width: 100%;
+}
+
+.education .box-container .box img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.education .box-container .box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex: 1 1 70rem;
+}
+
+.education .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: aliceblue;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.education .box-container .box .content p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: aliceblue;
+    text-align: left;
+}
+
+.education h4 {
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: left;
+    margin: 1rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+.skills {
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+}
+
+.skills .heading {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    padding: 4rem;
+}
+
+.skills .skill-container {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+        "cpp python js node"
+        "html css express mongo";
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.skills .skill-box {
+    background: #0f2653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 5%;
+    box-shadow: 0 0 10px #0ef;
+    transition: .5s ease;
+}
+
+.skill-box i {
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.skill-box:hover {
+    background: #0ef;
+    color: rgb(54, 52, 52);
+    box-shadow: 0 0 10px rgba(156, 244, 250, 0.575);
+}
+
+.skill-box span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project {
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+}
+
+.project .heading {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    padding: 4rem;
+}
+
+.project .project-container {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+        "mausam dimag_ka_khel"
+        "portfolio temp_conv";
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.project .project-box {
+    background: #0f2653;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 5%;
+    box-shadow: 0 0 10px #0ef;
+    transition: .5s ease;
+}
+
+.project .project-box .pro_img{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project .project-box:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #0ef;
+    /* background: #0ef; */
+    /* color: rgb(54, 52, 52); */
+    /* box-shadow: 0 0 10px rgba(156, 244, 250, 0.575); */
+}
+
+.contact {
+    background: #0f2653;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.contact .heading {
+    padding: 5rem;
+}
+
+.contact .container {
+    max-width: 1050px;
+    width: 100%;
+    background: #0f2653;
+    border-radius: 1.5rem;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.contact .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+}
+
+.contact .content .image-box {
+    max-width: 60%;
+    margin-left: 4rem;
+}
+
+.contact .content .image-box img {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+}
+
+.contact .content form {
+    width: 45%;
+    margin-right: 3.5rem;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+}
+
+form i {
+    position: absolute;
+    color: #000;
+    top: 40%;
+    left: 18px;
+    font-size: 17px;
+}
+
+form .field input,
+form .message textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 16px 0 48px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    background: #e5ecfb;
+}
+
+form .message {
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+}
+
+form .message i {
+    top: 25px;
+    color: #000;
+    font-size: 20px;
+    left: 15px;
+}
+
+form .message textarea {
+    min-height: 130px;
+    max-height: 230px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 12px 20px 0 48px;
+}
+
+form .button-area {
+    display: flex;
+    float: right;
+    flex-direction: row-reverse;
+    transition: .5s ease;
+}
+
+form .button-area:hover {
+    background: #0ef;
+    color: rgb(54, 52, 52);
+    box-shadow: 0 0 20px #0ef;
+}
+
+.button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 25px;
+    background: #2506ad;
+    box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+    font-family: "Nunito", sans-serif;
+}
+
+.button-area span {
+    font-size: 17px;
+    padding: 1rem;
+    display: none;
+}
+
+.button-area button i {
+    position: relative;
+    top: 6px;
+    left: 2px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.footer {
+    background: #051129;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+}
+
+.footer .box-container .box {
+    font-size: 18px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.footer h1 {
+    padding: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.footer h1 a {
+    color: azure;
+    text-decoration: none;
+    font-weight: 300;
+    transition: .3s;
+}
+
+.footer h1 a:hover {
+    color: #0ef;
+}
+
+.footer h1 i {
+    color: azure;
+    text-decoration: none;
+    font-weight: 300;
+    transition: .3s;
+}
+
+.footer h1 i:hover {
+    color: red;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
